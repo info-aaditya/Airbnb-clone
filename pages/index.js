@@ -49,7 +49,7 @@ export default function Home({ exploreData, CardData }) {
         
         {/* large Cards */}
         <LargeCards
-          img="https:links.papareact.com/4cj"
+          img="/lg-card.jpg"
           title="The Greatest Outdoors"
           description="Wishlists curated by Airbnb"
           buttonText="Get inspired"
