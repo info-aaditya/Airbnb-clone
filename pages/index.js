@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import LargeCards from "../components/LargeCards";
 import MediumCards from "../components/MediumCards";
 import SmallCards from "../components/SmallCards";
+import DiscoverCards from "../components/DiscoverCards";
 
 export default function Home({ exploreData, CardData }) {
   return (
@@ -37,21 +38,38 @@ export default function Home({ exploreData, CardData }) {
           </div>
         </section>
 
+        {/* large Cards */}
+        <LargeCards
+          img="/lg-card.jpg"
+          title="Not sure where to go? Perfect."
+          buttonText="I'm flexible"
+        />
+
         {/* section -2 */}
         <section>
-          <h2 className="text-4xl font-semibold py-8"> Live Anywehre</h2>
+          <h2 className="text-4xl font-semibold py-8"> Live Anywhere</h2>
           <div className="MediumCads flex space-x-3 overflow-scroll scrollbar-hide p-3 ml-3">
             {CardData?.map(({ img, title }) => (
               <MediumCards key={img} img={img} title={title} />
             ))}
           </div>
         </section>
+
+        {/* section -2 */}
+        <section>
+          <h2 className="text-4xl font-semibold py-8"> Discover Experiences</h2>
+          <div className="MediumCads flex space-x-3 overflow-scroll scrollbar-hide p-3 ml-3">
+            {CardData?.map(({ img, title }) => (
+              <DiscoverCards key={img} img={img} title={title} />
+            ))}
+          </div>
+        </section>        
         
         {/* large Cards */}
         <LargeCards
-          img="/lg-card.jpg"
-          title="The Greatest Outdoors"
-          description="Wishlists curated by Airbnb"
+          img="/hosting.jpg"
+          title="Try Hosting"
+          description="Earn extra income and unlock new opportunities by sharing your space"
           buttonText="Get inspired"
         />
       </main>
